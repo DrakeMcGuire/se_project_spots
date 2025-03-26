@@ -82,7 +82,7 @@
   }
 
   .profile__name {
-    font-size: 20;
+    font-size: 20px;
     margin: 0 0 6px;
     max-width: 288px;
   }
@@ -94,6 +94,11 @@
 
   .profile__column {
     margin: 0 0 20px;
+  }
+
+  .profile__edit-button {
+    padding: 0;
+    justify-content: center;
   }
 
   .profile__add-button {

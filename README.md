@@ -1,14 +1,14 @@
-# Project 3: Spots
+# Project: Spots
 
-### Overview  
+### Description 
 
-* Intro  
-* Figma  
-* Images  
+Spots is an interactive image sharing site that is optimized for large desktop and mobile phone screens. It also features buttons for editing profiles, creating posts, and the ability to like photos.
   
-**Intro**
+**Technologies**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+* HTML
+* CSS
+* Responsive Design
   
 **Figma**  
   
