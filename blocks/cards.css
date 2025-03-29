@@ -6,7 +6,7 @@
 .cards__list {
   list-style-type: none;
   margin: 0;
-  padding: 0 0 40px 0;
+  padding: 0 0 20px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, 413px);
   justify-content: center;
@@ -16,5 +16,6 @@
 @media screen and (max-width: 627px) {
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);
+    gap: 20px;
   }
 }
