@@ -9,7 +9,7 @@ const newPostBtn = document.querySelector('.profile__add-button');
 const newPostModal = document.querySelector('#new-post-modal');
 const newPostCloseBtn = newPostModal.querySelector('.modal__close-btn');
 
-const newPostForm = newPostModal.querySelector('.modal-form');
+const newPostForm = newPostModal.querySelector('.modal__form')
 const cardImageInput = newPostModal.querySelector('#card-image-input');
 const cardDescriptionInput = newPostModal.querySelector('#caption-description-input');
 
@@ -22,27 +22,27 @@ const profileDescriptionEl = document.querySelector('.profile__description');
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  editProfileModal.classList.add("modal__is-opened");
+  editProfileModal.classList.add("modal_is-opened");
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal__is-opened");
+  editProfileModal.classList.remove("modal_is-opened");
 });
 
 
 newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal__is-opened");
+  newPostModal.classList.add("modal_is-opened");
 });
 
 newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal__is-opened");
+  newPostModal.classList.remove("modal_is-opened");
 });
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  editProfileModal.classList.remove("modal__is-opened");
+  editProfileModal.classList.remove("modal_is-opened");
 }
 
 editProfileForm.addEventListener('submit', handleEditProfileSubmit);
@@ -50,7 +50,7 @@ editProfileForm.addEventListener('submit', handleEditProfileSubmit);
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
   console.log(cardImageInput, cardDescriptionInput);
-  newPostModal.classList.remove("modal__is-opened");
+  newPostModal.classList.remove("modal_is-opened");
 }
 
 newPostForm.addEventListener('submit', handleAddCardSubmit);
