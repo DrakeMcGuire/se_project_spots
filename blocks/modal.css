@@ -44,8 +44,7 @@
 }
 
 .modal__close-btn:hover {
-  color: #212121B2;
-  opacity: 70%;
+  opacity: 100%;
 }
 
 
@@ -106,8 +105,7 @@
 }
 
 .modal__submit-btn:hover {
-  background: #212121;
-  opacity: 70%;
+  opacity: 80%;
 }
 
 @media screen and (max-width: 627px) {
