@@ -47,7 +47,7 @@
   cursor: pointer;
 }
 
-.modal__close_type_preview {
+.modal__close-btn_type_preview {
   background-image: url(../images/close-icon-white.svg);
   background-color: transparent;
   opacity: 100%;
@@ -60,7 +60,7 @@
   opacity: 100%;
 }
 
-.modal__close_type_preview:hover {
+.modal__close-btn_type_preview:hover {
   opacity: 40%;
 }
 
@@ -179,12 +179,16 @@
     margin: 24px 0 0;
   }
 
-  .modal__close_type_preview {
+  .modal__close-btn_type_preview {
     top: -48px;
     right: 0;
   }
 
   .modal__image {
     max-width: unset;
+  }
+
+  .modal__caption {
+    font-size: 16px;
   }
 }
