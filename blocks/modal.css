@@ -84,7 +84,7 @@
   font-size: 16px;
   line-height: 1.1;
   color: #212121B2;
-  ;
+  display: block;
 }
 
 .modal__input {
@@ -105,6 +105,18 @@
   color: #2121214D;
 }
 
+.modal__input_typing_error {
+  border: 1px solid #FF000099;
+  opacity: 60%;
+}
+
+.modal__error {
+  display: block;
+  color:#FF0000B2;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
 .modal__submit-btn {
   padding: 18px 32px;
   max-width: 156px;
@@ -122,6 +134,11 @@
 
 .modal__submit-btn:hover {
   opacity: 80%;
+}
+
+.modal__submit-btn_error {
+  background: #212121;
+  opacity: 50%;
 }
 
 .modal__image-container {
