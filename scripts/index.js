@@ -105,20 +105,20 @@ function handleEscapeClose(evt) {
   }
 }
 
-document.addEventListener("keydown", handleEscapeClose);
+
 
 function openModal(modal) {
   console.log("Open Modal");
   modal.classList.add("modal_is-opened");
   modal.addEventListener("mousedown", modalOverlayClose);
-  modal.addEventListener("keydown", modalOverlayClose);
+  document.addEventListener("keydown", handleEscapeClose);
 }
 
 function closeModal(modal) {
   console.log("Close Modal");
   modal.classList.remove("modal_is-opened");
   modal.removeEventListener("mousedown", modalOverlayClose);
-  modal.removeEventListener("keydown", modalOverlayClose);
+  document.addEventListener("keydown", handleEscapeClose);
 }
 
 editProfileBtn.addEventListener("click", function () {
