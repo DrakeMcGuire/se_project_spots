@@ -105,8 +105,6 @@ function handleEscapeClose(evt) {
   }
 }
 
-
-
 function openModal(modal) {
   console.log("Open Modal");
   modal.classList.add("modal_is-opened");
@@ -124,7 +122,7 @@ function closeModal(modal) {
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  resetValidation(editProfileForm, [editProfileNameInput, editProfileDescriptionInput]);
+  resetValidation(editProfileForm, [editProfileNameInput, editProfileDescriptionInput], settings);
   //editProfileModal.classList.add("modal_is-opened");
   openModal(editProfileModal);
 });
