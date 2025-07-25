@@ -6,7 +6,6 @@
   <meta name="description" content="spots description"/>
   <meta name="keywords" content="spots keywords"/>
   <meta name="author" content="Drake McGuire"/>
-  <link rel="stylesheet" href="./pages/index.css"/>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
   <title>Spots</title>
 </head>
@@ -14,29 +13,37 @@
   <div class="page">
     <header class="header">
       <img
-        src="./images/Logo.svg"
+        id="logo"
         alt="spots logo"
-        class="header__logo">
+        class="header__logo"
+        />
     </header>
     <main class="content">
       <section class="profile page__section">
-        <img
-          src="./images/avatar.jpg"
-          alt="Bessie Coleman"
-          class="profile__avatar">
+        <div class="profile__avatar-container">
+          <button class="profile__avatar-btn">
+            <img
+              id="baby-pencil"
+              src="<%=require('./images/pencil-icon-light.svg')%>"
+              alt="pencil icon"
+              class="profile__pencil-icon"
+              />
+          </button>
+          <img id="avatar" src="<%=require('./images/avatar.jpg')%>" alt="Bessie Coleman" class="profile__avatar" />
+        </div>
         <div class="profile__column">
-          <h1 class="profile__name">Bessie Coleman</h1>
-          <p class="profile__description">Civil Aviator</p>
+          <h1 id="profile__name" class="profile__name">Bessie Coleman</h1>
+          <p id="profile__description" class="profile__description">Civil Aviator</p>
           <button type="button" class="profile__edit-button">
             <img
-              src="./images/pencil.svg"
-              alt="pencil icon">Edit Profile
+              id="pencil-icon"
+              alt="pencil icon">Edit Profile>
           </button>
         </div>
         <button type="button" class="profile__add-button">
           <img
-            src="./images/plus.svg"
-            alt="plus icon">New Post
+            id="plus-icon"
+            alt="plus icon">New Post>
         </button>
       </section>
       <section class="cards page__section">
@@ -142,7 +149,40 @@
       </div>
     </div>
   </div>
-  <script src="./scripts/validation.js"></script>
-  <script src="./scripts/index.js"></script>
+
+  <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <button type="button" class="modal__close-btn"></button>
+        <h2 class="modal__title">Edit avatar</h2>
+        <form id="edit-avatar-form" class="modal__form" novalidate>
+          <label for="profile-avatar-input" class="modal__label">
+            Avatar
+            <input
+              id="profile-avatar-input"
+              class="modal__input"
+              name="avatar"
+              placeholder="Avatar goes here"
+              required
+            />
+            <span id="profile-avatar-input-error" class="modal__error"></span>
+          </label>
+          <button id="avatarSubmitBtn" type="submit" class="modal__submit-btn">Save</button>
+        </form>
+      </div>
+  </div>
+
+  <!-- TODO - Style the modal -->
+  <div class="modal" id="delete-modal">
+    <div class="modal__container">
+      <button type="button" class="modal__close-btn"></button>
+      <h2 class="modal__title">Are you sure you want to delete this image?</h2>
+      <form id="edit-avatar-form" class="modal__form" novalidate>
+        <button id="avatarSubmitBtn" type="submit" class="modal__submit-btn">Delete</button>
+        <button id="avatarSubmitBtn" type="button" class="modal__submit-btn">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+
 </body>
 </html>
