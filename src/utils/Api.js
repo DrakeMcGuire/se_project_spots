@@ -54,18 +54,18 @@ class Api {
   });
   }
 
-  // deleteCard(id) {
-  //   return fetch(`${this._baseUrl}/cards/${id}`, {
-  //     method: "DELETE",
-  //     headers: this._headers,
-  //   })
-  //   .then((res) => {
-  //   if(res.ok) {
-  //     return res.json()
-  //   }
-  //   Promise.reject(`Error: ${res.status}`);
-  // });
-  // }
+  deleteCard(id) {
+    return fetch(`${this._baseUrl}/cards/${id}`, {
+      method: "DELETE",
+      headers: this._headers,
+    })
+    .then((res) => {
+    if(res.ok) {
+      return res.json()
+    }
+    Promise.reject(`Error: ${res.status}`);
+  });
+  }
 
   editAvaterInfo(avatar) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {

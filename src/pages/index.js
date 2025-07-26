@@ -7,7 +7,6 @@ import plusIcon from '../images/plus.svg';
 
 import { enableValidation, settings, resetValidation, disableButton } from "../scripts/validation.js";
 import Api from '../utils/Api.js';
-import { ids } from 'webpack';
 
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
@@ -148,10 +147,10 @@ function getCardElement(data) {
 
 
   const cardDeleteButtonEl = cardElement.querySelector(".card__delete-button");
-  // cardDeleteButtonEl.addEventListener("click", (evt) => {
-  //   handleDeleteCard(cardElement, data._id);
-  //   cardElement.remove();
-  // });
+  cardDeleteButtonEl.addEventListener("click", (evt) => {
+    handleDeleteCard(cardElement, data._id);
+    cardElement.remove();
+  });
 
   cardImageEl.addEventListener("click", () => {
     previewImageEl.src = data.link;
@@ -192,22 +191,22 @@ function closeModal(modal) {
   document.addEventListener("keydown", handleEscapeClose);
 }
 
-// function handleDeleteSubmit(evt) {
-//   evt.preventDefault();
-//   api
-//     .deleteCard(selectedCardId)
-//     .then(() => {
-//       // Remove card from the Dom
-//       // Close the modal
-//     })
-//     .catch(console.error);
-// }
+function handleDeleteSubmit(evt) {
+  evt.preventDefault();
+  api
+    .deleteCard(selectedCardId)
+    .then(() => {
+      // Remove card from the Dom
+      // Close the modal
+    })
+    .catch(console.error);
+}
 
-// function handleDeleteCard(cardElement, cardId) {
-//   selectedCard = cardElement;
-//   selectedCardId = cardId;
-//   openModal(deleteModal);
-// }
+function handleDeleteCard(cardElement, cardId) {
+  selectedCard = cardElement;
+  selectedCardId = cardId;
+  openModal(deleteModal);
+}
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
