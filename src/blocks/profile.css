@@ -22,8 +22,8 @@
 
 .profile__avatar-container:hover .profile__avatar-btn {
   visibility: visible;
-  background: black;
-  opacity: 50%;
+  background: #00000080;
+  border-radius: 8px;
 }
 
 .profile__avatar-btn::after {
@@ -115,7 +115,6 @@
 .profile__add-button:hover {
   cursor: pointer;
   opacity: 80%;
-
 }
 
 @media screen and (max-width: 627px) {
